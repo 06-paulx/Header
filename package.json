@@ -1,27 +1,29 @@
 {
-  "name": "reviews",
+  "name": "github-fetcher-fullstack-v2",
   "version": "1.0.0",
   "description": "",
-  "main": "bundle.js",
+  "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "build": "webpack",
-    "start": "nodemon ./server/server.js"
+    "start": "node seed.js",
+    "react-dev": "webpack -d --watch",
+    "server-dev": "nodemon server/index.js"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Miles Lo",
   "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "webpack": "^2.2.1"
+  },
   "dependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
-    "express": "^4.16.2",
-    "jest": "^22.3.0",
-    "morgan": "^1.9.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "webpack": "^3.11.0"
+    "body-parser": "^1.17.0",
+    "express": "^4.15.0",
+    "jquery": "^3.1.1",
+    "mysql": "^2.16.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "request": "^2.81.0"
   }
 }
