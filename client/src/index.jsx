@@ -2,19 +2,34 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import SidePanel from './components/SidePanel.jsx';
 import Splash from './components/Splash.jsx';
+import fetch from 'node-fetch';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: 'Zubzen',
-      summary: 'ENTIRE LOFT IN CANCUN',
-      description: "Lounge in the Hammock of a Designer Apartment",
-      star: 5,
-      reviews: 184,
-      photoUrl: 'https://a0.muscache.com/4ea/air/v2/pictures/e83d2486-45f8-4ae0-9122-b604e68782bd.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90'
+      name: '',
+      summary: '',
+      description: "",
+      star: '',
+      reviews: '',
+      photoUrl: ''
     }
 
+  }
+  componentDidMount() {
+    fetch('/listings')
+      .then(response => response.json())
+      .then(data => 
+        this.setState({
+          name: data[0].name,
+          summary: data[0].summary,
+          description: data[0].description,
+          star: data[0].star_rating,
+          reviews: data[0].review_count,
+          photoUrl: data[0].photo_url
+      })
+    )
   }
 
   render() {
