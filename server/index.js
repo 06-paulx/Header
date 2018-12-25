@@ -31,8 +31,7 @@ let port = 4000;
 // });
 app.get('/listings', (req, res) => {
   var num = Math.floor(Math.random() * 30);
-  console.log(num)
-  var queryParams = [num];
+  var queryParams = [1];
 
   con.query('select * from listings where id = ?', queryParams, function(err, results) {
     if (err) {

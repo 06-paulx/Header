@@ -4,6 +4,7 @@ import SidePanel from './components/SidePanel.jsx';
 import Splash from './components/Splash.jsx';
 import fetch from 'node-fetch';
 import Like from './components/Like.jsx';
+import Share from './components/Share.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -15,16 +16,24 @@ class App extends React.Component {
       star: '',
       reviews: '',
       photoUrl: '',
-      show: false
+      showLike: false,
+      showShare: false
     }
   }
-
-  showModal() {
-    this.setState({show: true})
+  showLikeModal() {
+    this.setState({showLike: true})
   }
 
-  hideModal() {
-    this.setState({show: false})
+  hideLikeModal() {
+    this.setState({showLike: false})
+  }
+
+  showShareModal() {
+    this.setState({ showShare: true })
+  }
+
+  hideShareModal() {
+    this.setState({ showShare: false })
   }
   componentDidMount() {
     fetch('/listings')
@@ -54,11 +63,17 @@ class App extends React.Component {
         />
         <Splash
           url={this.state.photoUrl}
-          showModal={this.showModal.bind(this)}
+          showLikeModal={this.showLikeModal.bind(this)}
+          showShareModal={this.showShareModal.bind(this)}
         />
         <Like 
-          show={this.state.show}
-          handleClose={this.hideModal.bind(this)}
+          show={this.state.showLike}
+          handleClose={this.hideLikeModal.bind(this)}
+        />
+        <Share 
+          show={this.state.showShare}
+          handleClose={this.hideShareModal.bind(this)}
+          description={this.state.description}
         />
       </section>
     </div>
