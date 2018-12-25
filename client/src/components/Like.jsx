@@ -1,6 +1,7 @@
 import React from 'react';
+import LikeList from './LikeList.jsx'
 
-var Like = ({show, handleClose, handleChange, handleCreateClick}) => {
+var Like = ({show, handleClose, handleChange, handleCreateClick, saveList}) => {
   const showHideClassName = show ? 'modal display-block' : 'modal display-none';
   return (
     <div className={showHideClassName}>
@@ -21,15 +22,13 @@ var Like = ({show, handleClose, handleChange, handleCreateClick}) => {
             Create
             </button>
         </div>
-        <hr></hr>
-        <li className="like-item">New York</li>
-        <hr></hr>
-        <li className="like-item">Vacation Places</li>
-        <hr></hr>
-        <li className="like-item">Mobile Starred Listings</li>
-        <hr></hr>
-        <li className="like-item">Dream Homes</li>
-
+          <div>
+            {saveList.map((item) => 
+              <LikeList 
+                value={item}
+                />
+            )}
+          </div> 
       </section>
     </div>
   )

@@ -19,7 +19,7 @@ class App extends React.Component {
       showLike: false,
       showShare: false,
       input: '',
-      saveList: []
+      saveList: ['New York', 'Vacation Places', 'Mobile Starred Listings', 'Dream Homes']
     }
   }
 
@@ -31,10 +31,10 @@ class App extends React.Component {
 
   handleCreateClick() {
     var array = this.state.saveList
-    array.push(this.state.input)
+    array.unshift(this.state.input)
     this.setState({
       saveList: array,
-      input: ''
+      input: '',
     })
 
     console.log(this.state.saveList)
@@ -92,7 +92,7 @@ class App extends React.Component {
           handleClose={this.hideLikeModal.bind(this)}
           handleChange={this.handleChange.bind(this)}
           handleCreateClick={this.handleCreateClick.bind(this)}
-
+          saveList={this.state.saveList}
         />
         <Share 
           show={this.state.showShare}

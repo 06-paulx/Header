@@ -16,17 +16,30 @@ var Share = ({show, handleClose, description}) => {
           Checkout this awesome listing on Airbnb: {description}
         </p>
         <hr></hr>
-          <li className="list-item">Facebook</li>
-          <hr></hr>
-          <li className="list-item">Twitter</li>
-          <hr></hr>
-          <li className="list-item">Email</li>
-          <hr></hr>
-          <li className="list-item">Messenger</li>
-          <hr></hr>
-          <li className="list-item">Copy Link</li>
-          <li className="list-item">Embed</li>
-          <hr></hr>
+          <div className="list-item">
+            <a className="list-item" target="_blank" href="https://www.facebook.com/">Facebook</a>
+          </div>
+        <hr></hr>
+          <div className="list-item">
+            <a className="list-item" target="_blank" href="https://twitter.com/">Twitter</a>
+          </div>
+        <hr></hr>
+          <div className="list-item">
+            <a className="list-item" target="_blank" href="https://gmail.com/">Email</a>
+          </div>
+        <hr></hr>
+          <div className="list-item">
+           <a className="list-item" target="_blank" href="https://www.messenger.com/">Messenger</a> 
+          </div>
+        <hr></hr>
+          <div className="list-item">
+            <a className="list-item">Copy Link</a>
+          </div>
+        <hr></hr>
+          <div className="list-item">
+           <a className="list-item">Embed</a>
+          </div>
+        <hr></hr>
       </section>
     </div>
   )
