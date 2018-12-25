@@ -1,10 +1,10 @@
 import React from 'react';
 
-function Splash({url}) {
+function Splash({url, showModal}) {
   return (
     <div className="splash">
       <img className="image" src={url} alt="url"/>
-      <button className='like'>
+      <button className='like' onClick={showModal}>
         <span className="glyphicon glyphicon-thumbs-up"></span>
       </button>
       <button className='share'>

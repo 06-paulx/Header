@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import SidePanel from './components/SidePanel.jsx';
 import Splash from './components/Splash.jsx';
 import fetch from 'node-fetch';
+import Like from './components/Like.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -10,12 +11,20 @@ class App extends React.Component {
     this.state = {
       name: '',
       summary: '',
-      description: "",
+      description: '',
       star: '',
       reviews: '',
-      photoUrl: ''
+      photoUrl: '',
+      show: false
     }
+  }
 
+  showModal() {
+    this.setState({show: true})
+  }
+
+  hideModal() {
+    this.setState({show: false})
   }
   componentDidMount() {
     fetch('/listings')
@@ -45,6 +54,11 @@ class App extends React.Component {
         />
         <Splash
           url={this.state.photoUrl}
+          showModal={this.showModal.bind(this)}
+        />
+        <Like 
+          show={this.state.show}
+          handleClose={this.hideModal.bind(this)}
         />
       </section>
     </div>
