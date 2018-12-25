@@ -17,9 +17,30 @@ class App extends React.Component {
       reviews: '',
       photoUrl: '',
       showLike: false,
-      showShare: false
+      showShare: false,
+      input: '',
+      saveList: []
     }
   }
+
+  handleChange(e) {
+    this.setState({
+      input: e.target.value
+    })
+  }
+
+  handleCreateClick() {
+    var array = this.state.saveList
+    array.push(this.state.input)
+    this.setState({
+      saveList: array,
+      input: ''
+    })
+
+    console.log(this.state.saveList)
+  }
+
+
   showLikeModal() {
     this.setState({showLike: true})
   }
@@ -69,6 +90,9 @@ class App extends React.Component {
         <Like 
           show={this.state.showLike}
           handleClose={this.hideLikeModal.bind(this)}
+          handleChange={this.handleChange.bind(this)}
+          handleCreateClick={this.handleCreateClick.bind(this)}
+
         />
         <Share 
           show={this.state.showShare}

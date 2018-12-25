@@ -1,6 +1,6 @@
 import React from 'react';
 
-var Like = ({show, handleClose}) => {
+var Like = ({show, handleClose, handleChange, handleCreateClick}) => {
   const showHideClassName = show ? 'modal display-block' : 'modal display-none';
   return (
     <div className={showHideClassName}>
@@ -10,7 +10,16 @@ var Like = ({show, handleClose}) => {
         </button>
         <h1 className="save-to-list">Save to list</h1>
         <div>
-          Create New LIst 
+          Create New List 
+          <div className="add-new-list">
+            <input onChange={handleChange} placeholder="Name your list"></input>
+          </div>
+          <button className="cancel-button">
+            Cancel
+            </button>
+          <button className="create-button" onClick={handleCreateClick}>
+            Create
+            </button>
         </div>
         <hr></hr>
         <li className="like-item">New York</li>
