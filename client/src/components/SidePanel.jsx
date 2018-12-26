@@ -1,6 +1,6 @@
 import React from 'react';
 // import Stars from './Stars.jsx';
-import _ from 'lodash';
+// import _ from 'lodash';
 // import logo from './../../dist/logo.jpg';
 function SidePanel({name, summary, description, stars, reviews}) {
   var stars = []

@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import SidePanel from './components/SidePanel.jsx';
 import Splash from './components/Splash.jsx';
 import fetch from 'node-fetch';
+import Like from './components/Like.jsx';
+import Share from './components/Share.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -10,12 +12,49 @@ class App extends React.Component {
     this.state = {
       name: '',
       summary: '',
-      description: "",
+      description: '',
       star: '',
       reviews: '',
-      photoUrl: ''
+      photoUrl: '',
+      showLike: false,
+      showShare: false,
+      input: '',
+      saveList: ['New York', 'Vacation Places', 'Mobile Starred Listings', 'Dream Homes']
     }
+  }
 
+  handleChange(e) {
+    this.setState({
+      input: e.target.value
+    })
+  }
+
+  handleCreateClick() {
+    var array = this.state.saveList
+    array.unshift(this.state.input)
+    this.setState({
+      saveList: array,
+      input: '',
+    })
+
+    console.log(this.state.saveList)
+  }
+
+
+  showLikeModal() {
+    this.setState({showLike: true})
+  }
+
+  hideLikeModal() {
+    this.setState({showLike: false})
+  }
+
+  showShareModal() {
+    this.setState({ showShare: true })
+  }
+
+  hideShareModal() {
+    this.setState({ showShare: false })
   }
   componentDidMount() {
     fetch('/listings')
@@ -45,6 +84,20 @@ class App extends React.Component {
         />
         <Splash
           url={this.state.photoUrl}
+          showLikeModal={this.showLikeModal.bind(this)}
+          showShareModal={this.showShareModal.bind(this)}
+        />
+        <Like 
+          show={this.state.showLike}
+          handleClose={this.hideLikeModal.bind(this)}
+          handleChange={this.handleChange.bind(this)}
+          handleCreateClick={this.handleCreateClick.bind(this)}
+          saveList={this.state.saveList}
+        />
+        <Share 
+          show={this.state.showShare}
+          handleClose={this.hideShareModal.bind(this)}
+          description={this.state.description}
         />
       </section>
     </div>
