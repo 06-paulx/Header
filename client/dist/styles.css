@@ -63,6 +63,9 @@ body {
 }
 
 .like {
+  background: url(like.png) no-repeat;
+  background-position: center;
+  background-color: #f2f2f2;
   position: absolute;
   top: 2%;
   right: 7%;
@@ -71,6 +74,9 @@ body {
 }
 
 .share {
+  background: url(share-arrow.png) no-repeat;
+  background-position: center;
+  background-color: #f2f2f2;
   position: absolute;
   top: 2%;
   right: 10%;
