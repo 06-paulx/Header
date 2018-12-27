@@ -307,3 +307,11 @@ button:disabled {
 .like-list {
   margin-top: 20px;
 }
+
+.close-button {
+  background: url(multiply.png) no-repeat;
+  width:32px;
+  height:32px;
+  border-width: 0;
+  background-color: transparent;
+}

@@ -7,8 +7,7 @@ var Like = ({ show, handleClose, handleChange, handleCreateClick, saveList, url,
   return (
     <div className={showHideClassName}>
       <section className='like-main'>
-        <button onClick={handleClose}>
-          Close
+        <button className="close-button" onClick={handleClose}>
         </button>
         <h1 className="save-to-list">Save to list</h1>
         <button id="create-new-list" onClick={handleCreateNewListClick}>

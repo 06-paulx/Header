@@ -6,8 +6,7 @@ var Share = ({show, handleClose, description}) => {
   return (
     <div className={showHideClassName}>
       <section className='share-main'>
-        <button onClick={handleClose}>
-          Close
+        <button className='close-button' onClick={handleClose}>
         </button>
         <h2>
           Share
