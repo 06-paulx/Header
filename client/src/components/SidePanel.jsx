@@ -10,7 +10,7 @@ function SidePanel({name, summary, description, stars, reviews}) {
       <img className="logo" src='https://image.flaticon.com/icons/svg/888/888836.svg' alt='Logo' />
       <div className="summary">{summary}</div>
       <div className="stars">
-      {[...Array(n)].map((e, i) => <span className="busterCards" key={i}>♥</span>)}
+        {[...Array(n)].map((e, i) => <span className="star" key={i}>⭑</span>)}
       {reviews}
       </div>
       <div className="description">{description}</div>
