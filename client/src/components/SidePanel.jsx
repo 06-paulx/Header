@@ -4,7 +4,6 @@ import React from 'react';
 // import logo from './../../dist/logo.jpg';
 function SidePanel({name, summary, description, stars, reviews}) {
   var n = stars
-  console.log(n)
   return (
     <div className="sidePanel">
       <img className="logo" src='https://image.flaticon.com/icons/svg/888/888836.svg' alt='Logo' />
