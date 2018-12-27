@@ -93,6 +93,11 @@ class App extends React.Component {
           handleChange={this.handleChange.bind(this)}
           handleCreateClick={this.handleCreateClick.bind(this)}
           saveList={this.state.saveList}
+          url={this.state.photoUrl}
+          location={this.state.name}
+          description={this.state.description}
+          stars={this.state.star}
+          reviews={this.state.reviews}
         />
         <Share 
           show={this.state.showShare}

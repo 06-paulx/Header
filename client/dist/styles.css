@@ -91,10 +91,6 @@ body {
   height: 40px;
 }
 
-.glyphicon {
-  font-size: 15px;
-}
-
 .modal {
   position: fixed;
   top: 0;
@@ -115,6 +111,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  max-height: 100%;
+  overflow-y: auto;
 }
 .share-main {
   color: #484848;
@@ -180,6 +178,58 @@ hr {
 .star {
   color: #a61f56;
 }
-//a61f56
-//
 
+.heart-icon {
+  max-width: 27px;
+  position: relative;
+  float: right;
+}
+
+.like-summary {
+  position: absolute !important;
+  right: 0px !important;
+  left: 0px !important;
+  background-color: rgb(255, 255, 255) !important;
+  bottom: 0px !important;
+  top: calc(100% - 128px) !important;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px -8px 20px -6px !important;
+  overflow-y: hidden !important;
+  transition: top 0.3s ease-in-out 0s !important;
+}
+
+.thumbnail {
+  max-width: 120px;
+  padding-left: 30px;
+  padding-top: 20px;
+  padding-right: 10px;
+}
+
+.thumbnail-container {
+  float: left;
+}
+
+.mini {
+  padding-top: 20px;
+  margin-left: 20px;
+}
+
+.mini-description {
+  font-weight: 800;
+}
+
+.mini-star {
+  color: #028489
+}
+
+.mini-location {
+  padding: 10px;
+}
+
+.create-new-list {
+  color: #a61f56;
+  font-size: 25px;
+  font-weight: 400;
+  font-family: Arial,
+  Helvetica,
+  sans-serif;
+}
