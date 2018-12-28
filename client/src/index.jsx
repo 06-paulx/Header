@@ -27,19 +27,31 @@ class App extends React.Component {
     this.setState({
       input: e.target.value
     })
+    document.getElementById("create-button").disabled = false;
   }
 
-  handleCreateClick() {
+  handleCreateClick(e) {
+    console.log(e.target.value)
     var array = this.state.saveList
     array.unshift(this.state.input)
     this.setState({
       saveList: array,
       input: '',
     })
-
-    console.log(this.state.saveList)
+    document.getElementById("name-your-list").value = '';
+    document.getElementById("create-button").disabled = true;
   }
 
+  handleCreateNewListClick() {
+    console.log('clickeddddd')
+    document.getElementById("add-form").style.display = "block";
+    document.getElementById("create-new-list").style.display = "none";
+  }
+
+  handleCancelClick() {
+    document.getElementById("add-form").style.display = "none";
+    document.getElementById("create-new-list").style.display = "block";
+  }
 
   showLikeModal() {
     this.setState({showLike: true})
@@ -69,6 +81,7 @@ class App extends React.Component {
           photoUrl: data[0].photo_url
       })
     )
+    document.getElementById("create-button").disabled = true;
   }
 
   render() {
@@ -93,6 +106,13 @@ class App extends React.Component {
           handleChange={this.handleChange.bind(this)}
           handleCreateClick={this.handleCreateClick.bind(this)}
           saveList={this.state.saveList}
+          url={this.state.photoUrl}
+          location={this.state.name}
+          description={this.state.description}
+          stars={this.state.star}
+          reviews={this.state.reviews}
+          handleCreateNewListClick={this.handleCreateNewListClick.bind(this)}
+          handleCancelClick={this.handleCancelClick.bind(this)}
         />
         <Share 
           show={this.state.showShare}

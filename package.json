@@ -3,22 +3,20 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "jest": {
-    "^.+\\.js$": "babel-jest",
-    "testPathIgnorePatterns": [
-      "/node_modules/",
-      "/vendor"
-    ],
-    "testRegex": "\\.jest\\.js$",
-    "snapshotSerializers": [
-      "enzyme-to-json/serializer"
+  "babel": {
+    "presets": [
+      "es2015",
+      "react"
     ]
+  },
+  "jest": {
+    "testRegex": "\\.jest\\.js$"
   },
   "scripts": {
     "start": "node seed.js",
     "react-dev": "webpack -d --watch",
     "server-dev": "nodemon server/index.js",
-    "test": "jest"
+    "test": "jest --verbose"
   },
   "author": "Miles Lo",
   "license": "ISC",
@@ -32,6 +30,7 @@
     "enzyme-adapter-react-16": "^1.7.1",
     "enzyme-to-json": "^3.3.5",
     "jest": "^23.6.0",
+    "jest-cli": "^23.6.0",
     "jet": "^0.2.0",
     "react-addons-test-utils": "^15.6.2",
     "react-dom": "^15.6.2",
