@@ -1,8 +1,7 @@
 {
-  "name": "github-fetcher-fullstack-v2",
+  "name": "Header",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "babel": {
     "presets": [
       "es2015",
