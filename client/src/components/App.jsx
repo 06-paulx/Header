@@ -66,9 +66,6 @@ export default class App extends React.Component {
     this.setState({ showShare: false })
   }
   componentDidMount() {
-    debugger;
-    // var listingId = window.location.pathname.slice(1);
-    // console.log(listingId)
     console.log(this.props.id)
     fetch('/api/listings/' + this.props.id)
       .then(response => response.json())
