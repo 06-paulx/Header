@@ -34,7 +34,8 @@ var Like = ({ show, handleClose, handleChange, handleCreateClick, saveList, url,
                 />
             )}
           </div> 
-          <div>
+      </section>
+          <div className="like-summary-section">
             <LikeSummary 
               url={url}
               location={location}
@@ -43,7 +44,6 @@ var Like = ({ show, handleClose, handleChange, handleCreateClick, saveList, url,
               description={description}
               />
           </div>
-      </section>
     </div>
   )
 }
