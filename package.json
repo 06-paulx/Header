@@ -1,8 +1,7 @@
 {
-  "name": "github-fetcher-fullstack-v2",
+  "name": "Header",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "babel": {
     "presets": [
       "es2015",
@@ -13,9 +12,10 @@
     "testRegex": "\\.jest\\.js$"
   },
   "scripts": {
-    "start": "node seed.js",
-    "react-dev": "webpack -d --watch",
-    "server-dev": "nodemon server/index.js",
+    "seed": "node seed.js",
+    "db": "mysql -u root < schema.sql",
+    "watch": "webpack -d --watch",
+    "start": "nodemon server/index.js",
     "test": "jest --verbose"
   },
   "author": "Miles Lo",

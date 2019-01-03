@@ -1,3 +1,5 @@
+DROP DATABASE IF EXISTS properties;
+
 CREATE DATABASE properties;
 
 USE properties;

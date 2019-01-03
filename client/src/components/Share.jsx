@@ -1,7 +1,6 @@
 import React from 'react';
 
 var Share = ({show, handleClose, description}) => {
-  console.log('click')
   const showHideClassName = show ? 'modal display-block' : 'modal display-none';
   return (
     <div className={showHideClassName}>
