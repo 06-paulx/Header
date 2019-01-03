@@ -85,7 +85,7 @@ export default class App extends React.Component {
   render() {
     return (
     <div>
-      <section className='header'>
+      <section className='m-header'>
         <SidePanel 
           name={this.state.name}
           summary={this.state.summary}

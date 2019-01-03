@@ -5,14 +5,14 @@ import React from 'react';
 function SidePanel({name, summary, description, stars, reviews}) {
   var n = stars
   return (
-    <div className="sidePanel">
-      <img className="logo" src='https://image.flaticon.com/icons/svg/888/888836.svg' alt='Logo' />
-      <div className="summary">{summary}</div>
-      <div className="stars">
-        {[...Array(n)].map((e, i) => <span className="star" key={i}>⭑</span>)}
+    <div className="m-sidePanel">
+      <img className="m-logo" src='https://image.flaticon.com/icons/svg/888/888836.svg' alt='Logo' />
+      <div className="m-summary">{summary}</div>
+      <div className="m-stars">
+        {[...Array(n)].map((e, i) => <span className="m-star" key={i}>⭑</span>)}
       {reviews}
       </div>
-      <div className="description">{description}</div>
+      <div className="m-description">{description}</div>
     </div>
   )
 }
