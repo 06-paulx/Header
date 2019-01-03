@@ -15,8 +15,8 @@
     "start": "node seed.js",
     "db": "mysql -u root < schema.sql",
     "seed": "node seed.js",
-    "react-dev": "webpack -d --watch",
-    "server-dev": "nodemon server/index.js",
+    "watch": "webpack -d --watch",
+    "start": "nodemon server/index.js",
     "test": "jest --verbose"
   },
   "author": "Miles Lo",
