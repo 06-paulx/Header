@@ -107,8 +107,8 @@ body {
   position: fixed;
   background: white;
   width: 568px;
-  height: 668px;
-  top: 50%;
+  height: 468px;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   max-height: 100%;
@@ -185,13 +185,14 @@ hr {
   float: right;
 }
 
-.like-summary {
-  position: absolute !important;
+.like-summary-section {
+  width: 628px;
+  position: fixed !important;
+  margin: auto;
   right: 0px !important;
   left: 0px !important;
   background-color: rgb(255, 255, 255) !important;
-  bottom: 0px !important;
-  top: calc(100% - 128px) !important;
+  bottom: 20%;
   box-shadow: rgba(0, 0, 0, 0.2) 0px -8px 20px -6px !important;
   overflow-y: hidden !important;
   transition: top 0.3s ease-in-out 0s !important;
