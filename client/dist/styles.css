@@ -71,7 +71,7 @@ body {
 }
 
 .m-like {
-  background: url(like.png) no-repeat;
+  background: url(https://s3.amazonaws.com/paul-x-logos/like.png) no-repeat;
   background-position: center;
   background-color: #f2f2f2;
   position: absolute;
@@ -82,7 +82,7 @@ body {
 }
 
 .m-share {
-  background: url(share-arrow.png) no-repeat;
+  background: url(https://s3.amazonaws.com/paul-x-logos/share-arrow.png) no-repeat;
   background-position: center;
   background-color: #f2f2f2;
   position: absolute;
@@ -318,7 +318,7 @@ button:disabled {
 }
 
 .m-close-button {
-  background: url(multiply.png) no-repeat;
+  background: url(https://s3.amazonaws.com/paul-x-logos/multiply.png) no-repeat;
   width:32px;
   height:32px;
   border-width: 0;
